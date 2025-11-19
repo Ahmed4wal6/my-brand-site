@@ -1,65 +1,449 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <title>My Brand</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background: #111827;
-            color: #f9fafb;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        h1 {
-            margin-bottom: 10px;
-        }
-        p {
-            line-height: 1.6;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            border: 1px solid #fbbf24;
-            color: #111827;
-            background: #fbbf24;
-            font-weight: bold;
-        }
-        .btn:hover {
-            opacity: 0.9;
-        }
-        .social {
-            margin-top: 30px;
-            font-size: 14px;
-        }
-        .social a {
-            color: #fbbf24;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>My Brand - Official Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+   
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+    .nav-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 1px;
+      font-size: 20px;
+      color: #fbbf24;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 14px;
+      font-size: 14px;
+    }
+
+    nav li {
+      cursor: pointer;
+      padding: 6px 10px;
+      border-radius: 999px;
+      transition: background 0.2s;
+    }
+
+    nav li:hover {
+      background: rgba(248, 250, 252, 0.08);
+    }
+
+    
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 26px 16px 40px;
+    }
+
+    section {
+      padding: 32px 0;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+    h1, h2 {
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #f9fafb;
+    }
+
+    h2 {
+      font-size: 22px;
+      color: #fbbf24;
+    }
+
+    p {
+      font-size: 14px;
+      color: #e5e7eb;
+    }
+
+    .muted {
+      color: #9ca3af;
+      font-size: 13px;
+    }
+
+    .tagline {
+      margin-top: 8px;
+      font-size: 15px;
+      color: #e5e7eb;
+    }
+
+   
+    .btn-row {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      background: #fbbf24;
+      color: #111827;
+      transition: transform 0.1s, box-shadow 0.1s, background 0.2s;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fbbf24;
+      border-color: #fbbf24;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.6);
+    }
+
+   
+    .card {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #f9fafb;
+    }
+
+    .pill-row {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: #e5e7eb;
+    }
+
+   
+    form {
+      margin-top: 14px;
+      display: grid;
+      gap: 10px;
+    }
+
+    label {
+      font-size: 13px;
+      color: #e5e7eb;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      margin-top: 4px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      color: #f9fafb;
+      font-size: 13px;
+      outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #fbbf24;
+      box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.6);
+    }
+
+    textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+
+   
+    .contact-row {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      width: fit-content;
+    }
+
+    .contact-label {
+      font-weight: 600;
+      color: #f9fafb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px 0 10px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    @media (min-width: 700px) {
+      h1 {
+        font-size: 34px;
+      }
+      .hero-layout {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 26px;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>My Brand</h1>
-        <p>مرحبًا! 👋<br>ده الموقع الرسمي للبراند بتاعي.</p>
-        <p>قريبًا هتلاقوا كل التفاصيل عن السويت شيرتات، التصميمات، وطرق الطلب.</p>
-        <a class="btn" href="https://wa.me/201000000000" target="_blank">كلمني على واتساب</a>
 
-        <div class="social">
-            تابعني على إنستجرام:
-            <br />
-            <a href="https://instagram.com/your_account" target="_blank">@your_account</a>
-        </div>
+  
+  <header>
+    <div class="nav-container">
+      <div class="logo">My Brand</div>
+      <nav>
+        <ul>
+          <li onclick="scrollToId('home')">الرئيسية</li>
+          <li onclick="scrollToId('products')">المنتجات</li>
+          <li onclick="scrollToId('order')">الطلب</li>
+          <li onclick="scrollToId('contact')">تواصل</li>
+        </ul>
+      </nav>
     </div>
+  </header>
+
+  <main>
+    
+    <section id="home">
+      <div class="hero-layout">
+        <div>
+          <h1>مرحبا في My Brand</h1>
+          <p class="tagline">
+            سويت شيرتات بتصميمات مختلفة، خامة مريحة، وشكل يلفت النظر.  
+            اسكان الـ QR اللي على السويت شيرت يجيبك هنا علشان تشوف التفاصيل وتتواصل معانا.
+          </p>
+
+          <div class="btn-row">
+            <button class="btn" onclick="scrollToId('order')">اطلب دلوقتي</button>
+            <button class="btn btn-outline" onclick="scrollToId('products')">شوف المميزات</button>
+          </div>
+
+          <p class="muted" style="margin-top:14px;">
+            الموقع ده لصفحة البراند الرسمية.  
+            أي حد عنده السويت شيرت يقدر يرجع هنا بسهولة عن طريق الـ QR.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">مزايا البراند</div>
+          <p class="muted">
+            بنحاول نركز على الراحة، البساطة، وإن السويت شيرت يمشي مع أي استايل: كاجوال، جيم، أو خروجة.
+          </p>
+          <div class="pill-row">
+            <span class="pill">خامة مريحة</span>
+            <span class="pill">مقاسات مختلفة</span>
+            <span class="pill">ألوان متنوعة</span>
+            <span class="pill">تصميم بسيط وشيك</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+    <section id="products">
+      <h2>المنتجات / التفاصيل</h2>
+      <p>
+        حالياً بنركز على سويت شيرت واحد بتصميم موحّد علشان الجودة تبقى ثابتة، وبعد كده إن شاء الله هنزود موديلات وأفكار جديدة.
+      </p>
+
+      <div class="card">
+        <div class="card-title">معلومات أساسية</div>
+        <ul class="muted" style="padding-right:18px; margin-top:6px;">
+          <li>الخامة: قطن/بوليستر مريح ومناسب للبس اليومي.</li>
+          <li>المقاسات المتاحة: S - M - L - XL (اسألنا لو محتاج مقاس مختلف).</li>
+          <li>الألوان المتاحة: اكتب في طلبك اللون اللي تفضله.</li>
+          <li>السعر: يتم تأكيده معاك في رسالة الواتساب حسب الكمية والعروض المتاحة.</li>
+        </ul>
+      </div>
+    </section>
+
+    
+    <section id="order">
+      <h2>اطلب سويت شيرت</h2>
+      <p>
+        املى البيانات تحت، وبمجرد ما تضغط على زر <strong>إرسال الطلب على واتساب</strong>  
+        هتتفتحلك محادثة واتساب فيها كل التفاصيل مكتوبة جاهزة، تراجعها وتبعتلنا.
+      </p>
+
+      <div class="card">
+        <form id="orderForm">
+          <div>
+            <label for="name">الاسم</label>
+            <input id="name" name="name" type="text" placeholder="اكتب اسمك هنا" required />
+          </div>
+
+          <div>
+            <label for="size">المقاس المطلوب</label>
+            <select id="size" name="size" required>
+              <option value="">اختار المقاس</option>
+              <option value="S">Small (S)</option>
+              <option value="M">Medium (M)</option>
+              <option value="L">Large (L)</option>
+              <option value="XL">X-Large (XL)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="color">اللون المفضل</label>
+            <input id="color" name="color" type="text" placeholder="مثال: أسود، أبيض، كحلي..." />
+          </div>
+
+          <div>
+            <label for="quantity">الكمية</label>
+            <input id="quantity" name="quantity" type="number" min="1" value="1" required />
+          </div>
+
+          <div>
+            <label for="notes">ملاحظات إضافية (اختياري)</label>
+            <textarea id="notes" name="notes" placeholder="مثال: مقاس مختلف، طريقة استلام، عنوان تقريبي..."></textarea>
+          </div>
+
+          <button type="submit" class="btn">إرسال الطلب على واتساب</button>
+        </form>
+
+        <p class="muted" style="margin-top:10px;">
+          لن يتم تنفيذ الطلب نهائياً إلا بعد ما فريق البراند يرد عليك على الواتساب ويأكد التفاصيل معاك.
+        </p>
+      </div>
+    </section>
+
+    
+    <section id="contact">
+      <h2>التواصل والسوشيال ميديا</h2>
+      <p>
+        لو حابب تسأل عن أي حاجة أو تشوف تصميمات أكتر، تقدر تتواصل معانا من خلال:
+      </p>
+
+      <div class="contact-row">
+        <a class="contact-link" href="https://wa.me/201102192781" target="_blank">
+          <span class="contact-label">واتساب:</span>
+          <span>201102192781</span>
+        </a>
+
+        <a class="contact-link" href="https://www.instagram.com/torkish_69?igsh=MW0yc2djZnJ4dHQ4Zw==" target="_blank">
+          <span class="contact-label">إنستجرام:</span>
+          <span>@torkish_69</span>
+        </a>
+
+        <a class="contact-link" href="https://www.tiktok.com/@torkish_69?_r=1&_t=ZS-91XdNQ6CV29" target="_blank">
+          <span class="contact-label">تيك توك:</span>
+          <span>@torkish_69</span>
+        </a>
+
+        <a class="contact-link" href="mailto:yourmail@example.com">
+          <span class="contact-label">الإيميل:</span>
+          <span>yourmail@example.com</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> My Brand – جميع الحقوق محفوظة.
+  </footer>
+
+  <script>
+    
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    
+    function scrollToId(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      window.scrollTo({
+        top: el.offsetTop - 70,
+        behavior: "smooth"
+      });
+    }
+
+    const orderForm = document.getElementById("orderForm");
+    orderForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+
+      const phone = "201102192781";
+
+      const name = document.getElementById("name").value.trim();
+      const size = document.getElementById("size").value;
+      const color = document.getElementById("color").value.trim();
+      const quantity = document.getElementById("quantity").value;
+      const notes = document.getElementById("notes").value.trim();
+
+      let message = "طلب جديد من موقع My Brand%0A%0A";
+      message += "الاسم: " + (name || "غير مذكور") + "%0A";
+      message += "المقاس: " + (size || "غير محدد") + "%0A";
+      message += "اللون: " + (color || "غير محدد") + "%0A";
+      message += "الكمية: " + (quantity || "1") + "%0A";
+      if (notes) {
+        message += "ملاحظات إضافية: " + notes + "%0A";
+      }
+
+      const url = "https://wa.me/" + phone + "?text=" + message;
+      window.open(url, "_blank");
+    });
+  </script>
 </body>
 </html>
